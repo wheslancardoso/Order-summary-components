@@ -1,0 +1,137 @@
+$Paleblue: hsl(225, 100%, 94%);
+$Brightblue: hsl(245, 75%, 52%);
+
+$Verypaleblue: hsl(225, 100%, 98%);
+$Desaturatedblue: hsl(224, 23%, 55%);
+$Darkblue: hsl(223, 47%, 23%);
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Red Hat Display', Arial, Helvetica, sans-serif;
+   min-height: 100vh;
+   display: relative;
+   background-image: url(/images/pattern-background-desktop.svg);
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-color: $Paleblue;
+}
+
+.container {
+   max-width: 450px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background-color: white;
+   border-radius: 20px;
+   overflow: hidden;
+}
+
+.text-content {
+   // margin: 30px;
+   padding: 10%;
+   padding-top: 7%;
+   text-align: center;
+
+   h2 {
+      color: $Darkblue;
+      margin-bottom: 12px;
+   }
+
+   p {
+      color: $Desaturatedblue;
+   }
+
+   button {
+      margin-top: 2rem;
+      border-radius: 10px;
+      border: none;
+      background-color: $Brightblue;
+      color: white;
+      font-size: 15px;
+      font-weight: 900;
+      padding: 12px 24px;
+      box-shadow: 0px 25px 15px $Paleblue;
+      width: 100%;
+      display: block;
+      margin-bottom: 2rem;
+      cursor: pointer;
+      transition: ease 0.3s;
+   }
+
+   button:hover {
+      opacity: 50%;
+   }
+
+   .cancel {
+      text-decoration: none;
+      color: $Desaturatedblue;
+      font-weight: 700;
+      transition: ease 0.3s;
+   }
+
+   .cancel:hover {
+      color: $Darkblue;
+   }
+}
+
+.plan-box {
+   margin-top: 15px;
+   background-color: $Verypaleblue;
+   display: flex;
+   align-items: center;
+   padding: 25px;
+   justify-content: space-between;
+   border-radius: 10px;
+
+   .left {
+      display: flex;
+      align-items: center;
+      text-align: left;
+      div {
+         h5 {
+            color: $Darkblue;
+            font-weight: 900;
+            font-size: 15px;
+         }
+         margin-left: 15px;
+      }
+   }
+
+   a {
+      color: $Brightblue;
+      font-weight: 700;
+      //   text-decoration: none;
+      transition: ease 0.3s;
+   }
+
+   a:hover {
+      opacity: 50%;
+      text-decoration: none;
+   }
+}
+
+@media (max-width: 425px) {
+   .container {
+      max-width: 85%;
+   }
+
+   .plan-box {
+      padding: 15px;
+
+      .left {
+         div {
+            margin-left: 12px;
+         }
+      }
+
+      a {
+         font-size: 15px;
+      }
+   }
+}
